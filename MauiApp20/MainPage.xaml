@@ -1,0 +1,69 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:MauiApp20"
+             x:Class="MauiApp20.MainPage">
+    <ContentPage.Resources>
+        <Style TargetType="Button">
+            <Setter Property="WidthRequest"
+                    Value="40" />
+            <Setter Property="HeightRequest"
+                    Value="40" />
+            <Setter Property="Padding"
+                    Value="5" />
+            <Setter Property="BackgroundColor"
+                    Value="Black" />
+            <Setter Property="CornerRadius"
+                    Value="5" />
+        </Style>
+        <Style TargetType="ImageButton">
+            <Setter Property="WidthRequest"
+                    Value="40" />
+            <Setter Property="HeightRequest"
+                    Value="40" />
+            <Setter Property="Padding"
+                    Value="5" />
+            <Setter Property="BackgroundColor"
+                    Value="Black" />
+            <Setter Property="CornerRadius"
+                    Value="5" />
+        </Style>
+        <Style TargetType="Label">
+            <Setter Property="VerticalOptions"
+                    Value="Center" />
+        </Style>
+    </ContentPage.Resources>
+
+    <Grid ColumnDefinitions="50, 300"
+          RowDefinitions="50, 50, 50, 50">
+        <ImageButton Grid.Row="0">
+            <ImageButton.Source>
+                <FontImageSource Glyph="{x:Static local:FontAwesomeSet.Square}"
+                                 FontFamily="FontAwesome" />
+            </ImageButton.Source>
+        </ImageButton>
+        <ImageButton Grid.Row="1"
+                     Source="square.png" />
+        <Button Grid.Row="2">
+            <Button.ImageSource>
+                <FontImageSource Glyph="{x:Static local:FontAwesomeSet.Square}"
+                                 FontFamily="FontAwesome" />
+            </Button.ImageSource>
+        </Button>
+        <Button Grid.Row="3"
+                ImageSource="square.png" />
+        <Label Grid.Column="1"
+               Grid.Row="0"
+               Text="ImageButton with FontImageSource" />
+        <Label Grid.Column="1"
+               Grid.Row="1"
+               Text="ImageButton with ImageSource" />
+        <Label Grid.Column="1"
+               Grid.Row="2"
+               Text="Button with FontImageSource" />
+        <Label Grid.Column="1"
+               Grid.Row="3"
+               Text="Button with ImageSource" />
+    </Grid>
+
+</ContentPage>
